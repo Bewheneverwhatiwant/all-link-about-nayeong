@@ -2,6 +2,7 @@ import CustomColumn from './components/CustomColumn'
 
 import Profile from './maincomponents/Profile'
 import GitButton from './maincomponents/GitButton'
+import TistoryButton from './maincomponents/TistoryButton'
 import MobileButton from './maincomponents/MobileButton'
 import WebButton from './maincomponents/WebButton'
 import FreeButton from './maincomponents/FreeButton'
@@ -16,6 +17,7 @@ function App() {
       <CustomColumn $width='100%' $height='auto' $alignitems='center' $justifycontent='center' $gap='1rem'>
         <Profile />
         <GitButton />
+        <TistoryButton />
         <MobileButton />
         <WebButton />
         <FreeButton />
