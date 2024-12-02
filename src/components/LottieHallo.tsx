@@ -1,7 +1,6 @@
 import Lottie from "react-lottie-player";
+import lottieJson from "../assets/Hallo2.json";
 
-import lottieJson from "../assets/light.json";
-
-export default function Animation() {
+export default function Hallo() {
 	return <Lottie loop animationData={lottieJson} play />;
 }

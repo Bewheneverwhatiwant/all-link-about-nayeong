@@ -1,21 +1,22 @@
 import styled from "styled-components";
 
 interface CustomButtonProps {
-	$width?: string | number;
-	$height?: string | number;
-	$gap?: string | number;
-	$display?: string;
-	$flexDirection?: string;
-	$alignItems?: string;
-	$justifyContent?: string;
-	$margin?: string;
-	$padding?: string;
-	$backgroundColor?: string;
-	$color?: string;
-	$border?: string;
-	$borderRadius?: string;
-	$hoverBackgroundColor?: string;
-	$hoverOpacity?: string | number;
+  $width?: string | number;
+  $height?: string | number;
+  $gap?: string | number;
+  $display?: string;
+  $flexDirection?: string;
+  $alignItems?: string;
+  $justifyContent?: string;
+  $margin?: string;
+  $padding?: string;
+  $backgroundColor?: string;
+  $color?: string;
+  $border?: string;
+  $borderRadius?: string;
+  $hoverBackgroundColor?: string;
+  $hoverOpacity?: string | number;
+  $boxshadow?: string;
 }
 
 const CustomButton = styled.button<CustomButtonProps>`
@@ -37,10 +38,12 @@ const CustomButton = styled.button<CustomButtonProps>`
   cursor: pointer;
   transition: opacity 0.1s ease-in-out;
 
+  box-shadow: ${(props) => props.$boxshadow || "none"};
+
   /* Hover 스타일링 */
   &:hover {
     background: ${(props) =>
-		props.$hoverBackgroundColor || props.$backgroundColor};
+    props.$hoverBackgroundColor || props.$backgroundColor};
     opacity: ${(props) => props.$hoverOpacity || 0.7};
   }
 `;

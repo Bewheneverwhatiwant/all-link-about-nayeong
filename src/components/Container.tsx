@@ -11,9 +11,9 @@ const StyledContainer = styled.div`
 `;
 
 export default function Container({
-	children,
+  children,
 }: {
-	children: React.ReactNode;
+  children: React.ReactNode;
 }) {
-	return <StyledContainer>{children}</StyledContainer>;
+  return <StyledContainer>{children}</StyledContainer>;
 }

@@ -8,6 +8,7 @@ interface StyledImgProps {
 	$borderradius?: string;
 	$border?: string;
 	$cursor?: string;
+	$boxshadow?: string;
 }
 
 const StyledImg = styled.img<StyledImgProps>`
@@ -17,7 +18,8 @@ const StyledImg = styled.img<StyledImgProps>`
   padding: ${(props) => props.$padding || '0'};
   border-radius: ${(props) => props.$borderradius || '0'};
   border: ${(props) => props.$border || 'none'};
-  cursor: ${(props) => props.$cursor || 'none'};
+  cursor: ${(props) => props.$cursor || 'auto'};
+  box-shadow: ${(props) => props.$boxshadow || "none"};
 `;
 
 export default StyledImg;
