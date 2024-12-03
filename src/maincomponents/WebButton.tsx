@@ -8,6 +8,7 @@ import StyledImg from "../components/StyledImg";
 import WebImg from '../assets/img_Web.png';
 import CustomColumn from "../components/CustomColumn";
 import Modal from '../components/Modal';
+import Monitor from '../components/LottieMonitor';
 
 function WebButton() {
 	const [isModalOpen, setIsModalOpen] = useState(false);
@@ -37,6 +38,10 @@ function WebButton() {
 					$boxshadow="0 4px 12px rgba(0, 0, 0, 0.1)" $backgroundcolor='white' $gap='0.5rem'>
 					<CustomRow $width="100%" $height="auto" $alignitems="center" $justifycontent="space-between">
 						<CustomColumn $width="50%" $height='auto' $alignitems="center" $justifycontent="center" $gap='0.5rem'>
+							<CustomBox $width="50%" $height="auto" $alignitems="center" $justifycontent="center"
+								$backgroundcolor="transparent" $overflowy="hidden">
+								<Monitor />
+							</CustomBox>
 							<CustomFont $color='#666666' $font='0.8rem' $fontweight="bold">데스크톱 접속만 가능해요!</CustomFont>
 							<CustomFont $color='black' $font='0.8rem' $fontweight="bold">웹 포트폴리오 보기</CustomFont>
 						</CustomColumn>

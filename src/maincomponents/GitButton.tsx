@@ -5,6 +5,7 @@ import CustomRow from "../components/CustomRow";
 import StyledImg from "../components/StyledImg";
 import GitImg from '../assets/img_GitButton.png';
 import CustomColumn from "../components/CustomColumn";
+import GitIcon from "../components/LottieGitIcon";
 
 function GitButton() {
 
@@ -20,6 +21,11 @@ function GitButton() {
 				<CustomRow $width="100%" $alignitems="center" $justifycontent="space-between">
 					<StyledImg src={GitImg} $width="50%" $height="auto" $boxshadow="0 4px 12px rgba(0, 0, 0, 0.1)" />
 					<CustomColumn $width="50%" $height="auto" $alignitems="center" $justifycontent="center">
+
+						<CustomBox $width="50%" $height="auto" $alignitems="center" $justifycontent="center"
+							$backgroundcolor="transparent" $overflowy="hidden">
+							<GitIcon />
+						</CustomBox>
 						<CustomFont $color='black' $font='0.8rem' $fontweight="bold">Github 프로필 보기</CustomFont>
 					</CustomColumn>
 				</CustomRow>

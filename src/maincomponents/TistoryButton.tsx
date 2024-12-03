@@ -5,6 +5,7 @@ import TistoryImg from '../assets/img_Tistory.png';
 import CustomRow from "../components/CustomRow";
 import StyledImg from "../components/StyledImg";
 import CustomColumn from "../components/CustomColumn";
+import LottieHTML from "../components/LottieHTML";
 
 function TistoryButton() {
 
@@ -19,6 +20,11 @@ function TistoryButton() {
 				$boxshadow="0 4px 12px rgba(0, 0, 0, 0.1)" $backgroundcolor='white' $gap='0.5rem'>
 				<CustomRow $width="100%" $height="auto" $alignitems="center" $justifycontent="space-between">
 					<CustomColumn $width="50%" $height="auto" $alignitems="center" $justifycontent="center">
+						<CustomBox $width="100%" $height="auto" $alignitems="center" $justifycontent="center"
+							$backgroundcolor="transparent" $overflowy="hidden">
+							<LottieHTML />
+						</CustomBox>
+
 						<CustomFont $color='black' $font='0.8rem' $fontweight="bold">소프트웨어 고민 엿보기</CustomFont>
 					</CustomColumn>
 					<StyledImg src={TistoryImg} $width="50%" $height="auto" $boxshadow="0 4px 12px rgba(0, 0, 0, 0.1)" />

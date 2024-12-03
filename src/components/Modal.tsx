@@ -1,12 +1,12 @@
 import React, { MouseEventHandler } from 'react';
 import styled from 'styled-components';
 import ReactPortal from './ReactPortal';
-import ModalBack from '../assets/ModalBack.svg';
 
 import CustomFont from './CustomFont';
-import CustomColumn from './CustomColumn';
 import CustomRow from './CustomRow';
 import CustomButton from './CustomButton';
+import Check from './LottieCheck';
+import CustomBox from './CustomBox';
 
 const ModalOverlay = styled.div`
     position: fixed;
@@ -23,11 +23,7 @@ const ModalOverlay = styled.div`
 `;
 
 const ModalContainer = styled.div`
-    background-color: transparent;
-	background-image: url(${ModalBack});
-	background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
+    background-color: white;
     width: 330px;
     height: 530px;
     display: flex;
@@ -36,6 +32,7 @@ const ModalContainer = styled.div`
     align-items: center;
     z-index: 1001;
     gap: 3rem;
+	border-radius: 1rem;
 `;
 
 interface ModalProps {
@@ -53,18 +50,16 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose }) => {
 				<CustomRow $width='100%' $height='auto' $alignitems='flex-start' $justifycontent='center' $gap='1rem'>
 					<ModalContainer onClick={(e) => e.stopPropagation()}>
 
-						<CustomColumn $width='100%' $height='30%' $alignitems='center' $justifycontent='space-between' $gap='3rem'>
-							<CustomColumn $width='60%' $height='auto' $alignitems='flex-start' $justifycontent='center' $gap='0.5rem'>
-								<CustomFont $color='black' $font='1rem'>복사가 되었어요!</CustomFont>
-								<CustomFont $color='black' $font='1rem'>너무나 감사드립니다.</CustomFont>
-							</CustomColumn>
+						<CustomBox $width='100%' $height='auto' $alignitems='center' $justifycontent='center' $padding='0'
+							$backgroundcolor='transparent' $overflowy='hidden'>
+							<Check />
+						</CustomBox>
 
-							<CustomFont $color='black' $font='1rem' $fontweight='bold'>- 나영이로부터.</CustomFont>
-						</CustomColumn>
+						<CustomFont $color='black' $font='1rem' $fontweight='bold'>복사 성공! ✨</CustomFont>
 
 					</ModalContainer>
 					<CustomButton $backgroundColor='transparent' $width='auto' $height='auto' $padding='0'>
-						<CustomFont $color='white' $font='1.5rem'>X</CustomFont>
+						<CustomFont $color='white' $font='1rem'>X</CustomFont>
 					</CustomButton>
 				</CustomRow>
 			</ModalOverlay>

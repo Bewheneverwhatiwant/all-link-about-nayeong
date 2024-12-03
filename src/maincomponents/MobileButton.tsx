@@ -5,6 +5,7 @@ import Mobile from '../assets/img_Mobile.png';
 import CustomRow from "../components/CustomRow";
 import StyledImg from "../components/StyledImg";
 import CustomColumn from "../components/CustomColumn";
+import Graph from "../components/LottieGraph";
 
 function MobileButton() {
 
@@ -20,6 +21,11 @@ function MobileButton() {
 				<CustomRow $width="100%" $height="auto" $alignitems="center" $justifycontent="space-between">
 					<StyledImg src={Mobile} $width="50%" $height='auto' $boxshadow="0 4px 12px rgba(0, 0, 0, 0.1)" />
 					<CustomColumn $width="50%" $height='auto' $alignitems="center" $justifycontent="center">
+						<CustomBox $width="50%" $height="auto" $alignitems="center" $justifycontent="center"
+							$backgroundcolor="transparent" $overflowy="hidden">
+							<Graph />
+						</CustomBox>
+
 						<CustomFont $color='black' $font='0.8rem' $fontweight="bold">모바일 포트폴리오 보기</CustomFont>
 					</CustomColumn>
 				</CustomRow>
