@@ -5,6 +5,7 @@ import CustomRow from "../components/CustomRow";
 import BlogImg from '../assets/img_Blog.jpg';
 import StyledImg from "../components/StyledImg";
 import CustomColumn from "../components/CustomColumn";
+import Diary from "../components/LittieDiary";
 
 function BlogButton() {
 
@@ -21,7 +22,11 @@ function BlogButton() {
 				<CustomRow $width='100%' $height='auto' $alignitems='center' $justifycontent="space-between">
 					<StyledImg src={BlogImg} $width="50%" $height='auto' $boxshadow="0 4px 12px rgba(0, 0, 0, 0.1)" />
 					<CustomColumn $width="50%" $height='auto' $alignitems="center" $justifycontent="center" $gap='0.5rem'>
-						<CustomFont $color='#666666' $font='0.8rem' $fontweight="bold">짧게 생각 기록하는 곳</CustomFont>
+						<CustomBox $width="50%" $height="auto" $alignitems="center" $justifycontent="center"
+							$backgroundcolor="transparent" $overflowy="hidden">
+							<Diary />
+						</CustomBox>
+						<CustomFont $color='#666666' $font='0.8rem' $fontweight="bold">가끔 쓰는 짧은 글</CustomFont>
 						<CustomFont $color='black' $font='0.8rem' $fontweight="bold">블로그 구경하기</CustomFont>
 					</CustomColumn>
 				</CustomRow>

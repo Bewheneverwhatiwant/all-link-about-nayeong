@@ -9,6 +9,7 @@ import WebImg from '../assets/img_Web.png';
 import CustomColumn from "../components/CustomColumn";
 import Modal from '../components/Modal';
 import Monitor from '../components/LottieMonitor';
+import Copy from '../components/LottieCopy';
 
 function WebButton() {
 	const [isModalOpen, setIsModalOpen] = useState(false);
@@ -50,8 +51,11 @@ function WebButton() {
 				</CustomBox>
 			</CustomButton>
 
-			<CustomButton $backgroundColor='white' $padding=' 0.5rem 1rem' $width='90%' $height='auto' $boxshadow="0 4px 12px rgba(0, 0, 0, 0.1)"
-				$border="1px solid #D9D9D9" onClick={handleShareMeClick}>
+			<CustomButton $backgroundColor='white' $padding='0' $width='90%' $height='auto' $boxshadow="0 4px 12px rgba(0, 0, 0, 0.1)"
+				$border="1px solid #D9D9D9" onClick={handleShareMeClick} $flexDirection='row' $gap='0'>
+				<CustomBox $width='3rem' $height='2rem' $backgroundcolor='transparent' $padding='0' $overflowy='hidden'>
+					<Copy />
+				</CustomBox>
 				<CustomFont $color="#666666" $font='0.8rem' $fontweight="bold">웹 주소 복사하기</CustomFont>
 			</CustomButton>
 
